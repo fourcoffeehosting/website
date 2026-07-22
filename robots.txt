@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block internal search pages (if applicable)
+Disallow: /search/
+Disallow: /?q=
+
+# Sitemap
+Sitemap: https://fourcoffee.in/sitemap.xml
