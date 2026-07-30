@@ -2,19 +2,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Favicon -->
+<!-- Favicon -->
     <link rel="icon" type="image/webp" href="Four%20Coffee%20Cafe%20Logo.webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Four Coffee | Premium Modern Cafe</title>
     <meta name="description" content="Experience the warmth of Four Coffee. A premium modern cafe offering artisanal coffee, fresh breakfast, and a cozy ambiance.">
 
-    <link rel="canonical" href="https://fourcoffee.in/" />
+<link rel="canonical" href="https://fourcoffee.in/" />
     
     <!-- Open Graph / Social -->
     <meta property="og:type" content="cafe">
     <meta property="og:title" content="Four Coffee | Premium Modern Cafe">
-    <meta property="og:description" content="Artisanal coffee, fresh breakfast, and a cozy ambiance.">
+    <meta property="og:description" content="Four coffee, fresh breakfast, and a cozy ambiance.">
     <meta property="og:image" content="Four%20Coffee%20Cafe%20Logo.webp">
     <meta property="og:url" content="https://fourcoffee.com">
     <meta name="twitter:card" content="summary">
@@ -23,11 +23,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- SEO Optimized Font Loading with Display Swap -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Preload Hero Image for Faster LCP -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=1920&q=80" fetchpriority="high">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -62,12 +65,12 @@
     <!-- Hero Section -->
     <header id="home" class="hero">
         <div class="hero-video-wrapper">
-            <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=1920&q=80" alt="Coffee brewing process" class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=1920&q=80" alt="Coffee brewing process" class="hero-bg" fetchpriority="high">
             <div class="overlay"></div>
         </div>
         <div class="hero-content reveal-up">
-            <h1 class="animate-text">Where Every Cup Tells a Story</h1>
-            <p>Experience freshly brewed coffee, quality ingredients, and a warm sanctuary in the heart of the city. Join us at Four Coffee for your perfect daily brew.</p>
+            <h1 class="animate-text">Good Coffee Always, All Ways..!!</h1>
+            <p>From carefully crafted coffees and artisanal beverages to fresh food and indulgent desserts, every item on our menu is made with quality ingredients, thoughtful preparation, and genuine hospitality.</p>
             <div class="hero-ctas">
                 <a href="#menu" class="btn btn-secondary glass">Explore Menu</a>
             </div>
@@ -82,45 +85,157 @@
     <!-- About Section -->
     <section id="about" class="about section-padding">
         <div class="container layout-grid">
-            <div class="about-image reveal-left">
-                <img src="Four%20Coffee%20The%20Clay%20Chapter.webp" alt="Four Coffee The Clay Chapter" loading="lazy">
-            </div>
-            <div class="about-content reveal-right">
-                <h2 class="section-title">Our Story</h2>
-                <h3 class="subtitle">Crafting Every Cup with Passion</h3>
-                <p>At Four Coffee, we craft every cup with care using quality beans and fresh ingredients. Our welcoming café is a place to relax, connect, and enjoy exceptional coffee made with passion in every sip.</p>
-                
-                <div class="mission-box">
-                    <h3>Our Mission</h3>
-                    <p>To serve exceptional coffee, fresh flavours, and genuine hospitality that turns every visit into a memorable experience.</p>
+            <!-- Left Column: Our Story -->
+            <article class="story-article reveal-left">
+                <div class="story-header">
+                    <div class="header-tag">
+                        <span class="tag-dot"></span>
+                        <h2 class="story-kicker">Our Story</h2>
+                    </div>
                 </div>
-    </section>
 
+                <p class="story-title">
+                    FOUR COFFEE was born from a passion for creating experiences, not just serving beverages.
+                </p>
+
+                <p class="story-text">
+                    We wanted to build cafés where conversations flow naturally, creativity finds a home, and every guest feels welcomed. Inspired by global café culture and rooted in Indian hospitality, we’ve designed spaces that encourage people to slow down, connect, and enjoy life’s simple moments.
+                </p>
+
+                <p class="promise-intro-text">
+                    Every outlet carries its own personality while staying true to one promise:
+                </p>
+
+                <div class="brand-promise-box">
+                    <p class="brand-promise-text">Good coffee. Always, All ways.</p>
+                </div>
+            </article>
+
+            <!-- Right Column: Our Coffee Philosophy -->
+            <article class="philosophy-article reveal-right">
+                <div class="media-frame">
+                    <img 
+                        src="Four%20Coffee%20The%20Clay%20Chapter.webp" 
+                        alt="Four Coffee The Clay Chapter" 
+                        loading="lazy" 
+                        class="frame-img"
+                    />
+                </div>
+
+                <div class="philosophy-content">
+                    <div class="philosophy-header">
+                        <h3 class="philosophy-title">Our Coffee Philosophy</h3>
+                    </div>
+
+                    <p class="philosophy-intro">
+                        Great coffee begins long before it reaches your cup.
+                    </p>
+
+                    <p class="philosophy-body">
+                        We carefully select premium beans, roast them to highlight their natural flavours, and prepare every beverage with precision. Whether you enjoy a classic Espresso, a creamy Cappuccino, a refreshing Cold Coffee, or one of our signature creations, every cup is crafted to deliver consistency and character.
+                    </p>
+
+                    <div class="philosophy-conclusion">
+                        <p class="conclusion-sub">Coffee isn't just what we serve.</p>
+                        <p class="conclusion-main">It's what inspires us.</p>
+                    </div>
+                </div>
+            </article>
+    </section>
     <!-- Why Choose Us -->
     <section id="why-us" class="why-us section-padding bg-light">
-        <div class="container text-center reveal-up">
-            <h2 class="section-title">Why Choose Four Coffee?</h2>
+        <div class="container reveal-up">
+            <div class="why-us-header">
+                <h2 class="section-title">Why Choose Four Coffee?</h2>
+                <p class="why-us-subtitle">Five reasons guests keep coming back – and why you will too.</p>
+            </div>
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="icon-wrapper"><i class="fas fa-leaf"></i></div>
-                    <h3>Fresh Ingredients</h3>
-                    <p>Sourced daily to ensure premium quality and healthy choices for our community.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-wrapper"><i class="fas fa-mug-hot"></i></div>
-                    <h3>Artisanal Roasts</h3>
-                    <p>Carefully selected beans, roasted in-house to bring out unique, rich flavor profiles.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-wrapper"><i class="fas fa-bolt"></i></div>
-                    <h3>Fast Service</h3>
-                    <p>Efficient ordering and quick preparation without compromising on our premium standards.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-wrapper"><i class="fas fa-smile"></i></div>
-                    <h3>Warm Hospitality</h3>
-                    <p>Our friendly staff ensures a relaxed atmosphere and a smile with every order.</p>
-                </div>
+                <article class="feature-card">
+                    <div class="card-accent"></div>
+                    <div class="card-top">
+                        <div class="icon-wrapper"><i class="fas fa-utensils"></i></div>
+                        <span class="card-number">01</span>
+                    </div>
+                    <h3>Fresh Food, Made with Care</h3>
+                    <div class="feature-content">
+                        <p>Our kitchen complements every coffee experience.</p>
+                        <p>From wholesome breakfasts and satisfying meals to handcrafted sandwiches, pizzas, pasta, desserts, and cafés favourites, everything is prepared fresh to deliver comfort and flavour in every bite.</p>
+                        <p>Whether you're stopping in for a quick snack or a leisurely meal, we've got something you'll love.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <div class="card-accent"></div>
+                    <div class="card-top">
+                        <div class="icon-wrapper"><i class="fas fa-laptop-house"></i></div>
+                        <span class="card-number">02</span>
+                    </div>
+                    <h3>Designed for Every Occasion</h3>
+                    <div class="feature-content">
+                        <p>FOUR COFFEE is more than a cafés.</p>
+                        <p>It's where students study, professionals work, friends celebrate, families gather, creators collaborate, and communities grow.</p>
+                        <p>Our spaces are thoughtfully designed to make every visit comfortable, inspiring, and memorable.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <div class="card-accent"></div>
+                    <div class="card-top">
+                        <div class="icon-wrapper"><i class="fas fa-users"></i></div>
+                        <span class="card-number">03</span>
+                    </div>
+                    <h3>Workshops &amp; Community</h3>
+                    <div class="feature-content">
+                        <p>We believe cafés should bring people together.</p>
+                        <p>That's why FOUR COFFEE regularly hosts workshops, book clubs, networking sessions, creative events, live performances, and community gatherings.</p>
+                        <p>Our cafés are built to spark ideas, encourage learning, and create lasting connections.</p>
+                    </div>
+                </article>
+                <article class="feature-card">
+                    <div class="card-accent"></div>
+                    <div class="card-top">
+                        <div class="icon-wrapper"><i class="fas fa-concierge-bell"></i></div>
+                        <span class="card-number">04</span>
+                    </div>
+                    <h3>Catering &amp; Coffee Experiences</h3>
+                    <div class="feature-content">
+                        <p>Bring the FOUR COFFEE experience to your event.</p>
+                        <p>From weddings and corporate gatherings to private celebrations and exhibitions, our professional coffee catering service delivers handcrafted beverages with premium equipment, trained baristas, and seamless service.</p>
+                        <p>Wherever your event is, exceptional coffee follows.</p>
+                    </div>
+                </article>
+                <article class="feature-card feature-card--promise">
+                    <div class="card-accent"></div>
+                    <div class="card-top">
+                        <div class="icon-wrapper"><i class="fas fa-award"></i></div>
+                        <span class="card-number">05</span>
+                    </div>
+                    <h3>Our Promise</h3>
+                    <div class="feature-content">
+                        <div class="promise-badges">
+                            <div class="promise-badge">
+                                <i class="fas fa-user"></i>
+                                <span>Every guest.</span>
+                            </div>
+                            <div class="promise-badge">
+                                <i class="fas fa-coffee"></i>
+                                <span>Every cup.</span>
+                            </div>
+                            <div class="promise-badge">
+                                <i class="fas fa-heart"></i>
+                                <span>Every visit.</span>
+                            </div>
+                        </div>
+                        <p>We are committed to delivering:</p>
+                        <ul class="promise-list">
+                            <li><i class="fas fa-check"></i> Premium quality ingredients</li>
+                            <li><i class="fas fa-check"></i> Freshly prepared food</li>
+                            <li><i class="fas fa-check"></i> Consistent coffee craftsmanship</li>
+                            <li><i class="fas fa-check"></i> Warm and attentive service</li>
+                            <li><i class="fas fa-check"></i> Beautiful café spaces</li>
+                            <li><i class="fas fa-check"></i> Memorable experiences</li>
+                        </ul>
+                        <p>Because great cafés are remembered not only for what they serve—but for how they make people feel.</p>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -135,75 +250,39 @@
                     <input type="text" id="menuSearch" placeholder="Search menu items..." aria-label="Search Menu">
                 </div>
                 <div class="menu-filters" id="menuFilters">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="coffee">Coffee</button>
-                    <button class="filter-btn" data-filter="food">Food</button>
+                    <button class="filter-btn active" data-filter="food">Food</button>
+                    <button class="filter-btn" data-filter="beverages">Beverages</button>
+                    <button class="filter-btn" data-filter="desserts">Desserts</button>
                 </div>
+                
+                <div class="menu-filters secondary-filters" id="foodFilters">
+                    <button class="filter-btn sub-filter-btn active" data-filter="sharing-plates">Sharing Plates</button>
+                    <button class="filter-btn sub-filter-btn" data-filter="open-toasts">Open Toasts</button>
+                    <button class="filter-btn sub-filter-btn" data-filter="sandwiches">Sandwiches</button>
+                    <button class="filter-btn sub-filter-btn" data-filter="platters">Platters</button>
+                    <button class="filter-btn sub-filter-btn" data-filter="viennoiserie">Viennoiserie</button>
+                    <button class="filter-btn sub-filter-btn" data-filter="thin-crust-pizzas">Thin Crust Pizzas</button>
+                    <button class="filter-btn sub-filter-btn" data-filter="fries-sides">Fries &amp; Sides</button>
+                </div>
+
+                <div class="menu-filters secondary-filters" id="beveragesFilters" style="display: none;">
+                    <button class="filter-btn sub-filter-btn active" data-filter="cold-coffee">Cold Coffee</button>
+                    <button class="filter-btn sub-filter-btn" data-filter="hot-coffee">Hot Coffee</button>
+                    <button class="filter-btn sub-filter-btn" data-filter="matcha">Matcha</button>
+                    <button class="filter-btn sub-filter-btn" data-filter="iced-coffee">Iced Coffee</button>
+                    <button class="filter-btn sub-filter-btn" data-filter="hot-chocolate">Hot Chocolate</button>
+                    <button class="filter-btn sub-filter-btn" data-filter="non-coffee">Non Coffee</button>
+                    <button class="filter-btn sub-filter-btn" data-filter="cold-brew">Cold Brew</button>
+                    <button class="filter-btn sub-filter-btn" data-filter="thick-shake">Thick Shake</button>
+                </div>
+
             </div>
 
             <div class="menu-grid" id="menuGrid">
-                <!-- Coffee Items -->
-                <article class="menu-card reveal-up" data-category="coffee">
+                <!-- SHARING PLATES -->
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="sharing-plates">
                     <div class="card-image">
-                        <img src="Cold%20Coffee.webp" alt="Chilled classic cold coffee topped with light foam in a tall glass" loading="lazy">
-                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
-                    </div>
-                    <div class="card-content">
-                        <h3>Cold Coffee</h3>
-                        <p>Chilled blend of rich espresso and creamy milk, served over ice.</p>
-                        <div class="card-footer">
-                            <span class="price">270.00 ₹</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="menu-card reveal-up" data-category="coffee">
-                    <div class="card-image">
-                        <img src="Biscoff%20Cold%20Coffee.webp" alt="Creamy cold coffee infused with Lotus Biscoff biscuit spread and crumbs" loading="lazy">
-                        <span class="badge bestseller">Bestseller</span>
-                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
-                    </div>
-                    <div class="card-content">
-                        <h3>Biscoff Cold Coffee</h3>
-                        <p>Decadent cold brew blended with sweet Lotus Biscoff cookie spread.</p>
-                        <div class="card-footer">
-                            <span class="price">350.00 ₹</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="menu-card reveal-up" data-category="coffee">
-                    <div class="card-image">
-                        <img src="Brownie%20Cold%20Coffee.webp" alt="Decadent chocolate brownie cold coffee garnished with brownie pieces" loading="lazy">
-                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
-                    </div>
-                    <div class="card-content">
-                        <h3>Brownie Cold Coffee</h3>
-                        <p>Rich, velvety cold coffee blended with chunks of fudgy chocolate brownie.</p>
-                        <div class="card-footer">
-                            <span class="price">350.00 ₹</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="menu-card reveal-up" data-category="coffee">
-                    <div class="card-image">
-                        <img src="Nutella%20Cold%20Coffee.webp" alt="Indulgent cold coffee layered with hazelnut Nutella chocolate drizzle" loading="lazy">
-                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
-                    </div>
-                    <div class="card-content">
-                        <h3>Nutella Cold Coffee</h3>
-                        <p>Creamy iced coffee infused with rich, smooth hazelnut chocolate Nutella.</p>
-                        <div class="card-footer">
-                            <span class="price">350.00 ₹</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Food Items -->
-                <article class="menu-card reveal-up" data-category="food">
-                    <div class="card-image">
-                        <img src="Masala%20Scrambled%20Cottage%20Cheese.webp" alt="Spiced scrambled paneer cottage cheese served in a traditional dish" loading="lazy">
+                        <img src="Masala%20Scrambled%20Cottage%20Cheese.webp" alt="Masala Scrambled Cottage Cheese" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
                         <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="card-content">
@@ -214,10 +293,35 @@
                         </div>
                     </div>
                 </article>
-
-                <article class="menu-card reveal-up" data-category="food">
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="sharing-plates">
                     <div class="card-image">
-                        <img src="Penne%20In%20Pink%20Romesco.webp" alt="Fresh penne pasta coated in creamy pink romesco sauce" loading="lazy">
+                        <img src="Saut%C3%A9ed%20Garlic%20Mushroom%20On%20Hummus.webp" alt="Saut&#233;ed Garlic Mushroom On Hummus" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Saut&#233;ed Garlic Mushroom On Hummus</h3>
+                        <p>Earthy garlic mushrooms served over a bed of creamy, rich hummus.</p>
+                        <div class="card-footer">
+                            <span class="price">450.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="sharing-plates">
+                    <div class="card-image">
+                        <img src="Penne%20In%20Alfredo.webp" alt="Penne In Alfredo" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Penne In Alfredo</h3>
+                        <p>Classic penne pasta coated in a velvety, rich cheese and cream sauce.</p>
+                        <div class="card-footer">
+                            <span class="price">425.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="sharing-plates">
+                    <div class="card-image">
+                        <img src="Penne%20In%20Pink%20Romesco.webp" alt="Penne In Pink Romesco" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
                         <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="card-content">
@@ -228,11 +332,9 @@
                         </div>
                     </div>
                 </article>
-
-                <article class="menu-card reveal-up" data-category="food">
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="sharing-plates">
                     <div class="card-image">
-                        <img src="Spaghetti%20Aglio%20e%20Olio.webp" alt="Plate of traditional spaghetti aglio e olio with garlic and parsley" loading="lazy">
-                        <span class="badge bestseller">Bestseller</span>
+                        <img src="Spaghetti%20Aglio%20e%20Olio.webp" alt="Spaghetti Aglio e Olio" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
                         <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="card-content">
@@ -243,11 +345,50 @@
                         </div>
                     </div>
                 </article>
-
-                <article class="menu-card reveal-up" data-category="food">
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="sharing-plates">
                     <div class="card-image">
-                        <img src="Haas%20Avocado%20Guac%20On%20Toast.webp" alt="Crispy toasted sourdough bread topped with fresh guacamole and tomatoes" loading="lazy">
-                        <span class="badge bestseller">Bestseller</span>
+                        <img src="Penne%20In%20Creamy%20Pesto.webp" alt="Penne In Creamy Pesto" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Penne In Creamy Pesto</h3>
+                        <p>Fresh penne tossed in a vibrant, basil-rich creamy pesto sauce.</p>
+                        <div class="card-footer">
+                            <span class="price">425.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="sharing-plates">
+                    <div class="card-image">
+                        <img src="Penne%20In%20Arrabbiata.webp" alt="Penne In Arrabbiata" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Penne In Arrabbiata</h3>
+                        <p>Spicy tomato sauce with garlic and chili flakes, tossed with fresh penne.</p>
+                        <div class="card-footer">
+                            <span class="price">425.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- OPEN TOASTS -->
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="open-toasts">
+                    <div class="card-image">
+                        <img src="Garlic%20Mushroom%20On%20Hummus.webp" alt="Garlic Mushroom On Hummus" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Garlic Mushroom On Hummus</h3>
+                        <p>Warm, buttery garlic mushrooms resting on our signature smooth hummus toast.</p>
+                        <div class="card-footer">
+                            <span class="price">450.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="open-toasts">
+                    <div class="card-image">
+                        <img src="Haas%20Avocado%20Guac%20On%20Toast.webp" alt="Haas Avocado Guac On Toast" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
                         <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="card-content">
@@ -258,34 +399,553 @@
                         </div>
                     </div>
                 </article>
-
-                <article class="menu-card reveal-up" data-category="food">
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="open-toasts">
                     <div class="card-image">
-                        <img src="Loaded%20Veggie%20%26%20Cheese.webp" alt="Gourmet grilled sandwich loaded with vegetables and melted cheese" loading="lazy">
+                        <img src="Roasted%20Veggies%20On%20Smoked%20Paprika%20Hummus.webp" alt="Roasted Veggies On Smoked Paprika Hummus" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
                         <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="card-content">
-                        <h3>Loaded Veggie & Cheese</h3>
+                        <h3>Roasted Veggies On Smoked Paprika Hummus</h3>
+                        <p>Oven-roasted seasonal greens on a smoky paprika-infused hummus base.</p>
+                        <div class="card-footer">
+                            <span class="price">325.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="open-toasts">
+                    <div class="card-image">
+                        <img src="Nutella%20Mascarpone%20Berry%20Toast.webp" alt="Nutella Mascarpone Berry Toast" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Nutella Mascarpone Berry Toast</h3>
+                        <p>A sweet indulgence of Nutella, creamy mascarpone, and fresh seasonal berries.</p>
+                        <div class="card-footer">
+                            <span class="price">375.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- SANDWICHES -->
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="sandwiches">
+                    <div class="card-image">
+                        <img src="Loaded%20Veggie%20%26%20Cheese.webp" alt="Loaded Veggie &amp; Cheese" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Loaded Veggie &amp; Cheese</h3>
                         <p>Toasted sandwich packed with fresh seasonal vegetables and melted cheddar cheese.</p>
                         <div class="card-footer">
                             <span class="price">425.00 ₹</span>
                         </div>
                     </div>
                 </article>
-
-                <article class="menu-card reveal-up" data-category="food">
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="sandwiches">
                     <div class="card-image">
-                        <img src="item_1189602_1762962249447_RRG06512.webp" alt="Golden crispy french fries served in a paper cup" loading="lazy">
+                        <img src="New%20York%20Cheese%20Melt.webp" alt="New York Cheese Melt" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
                         <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
                     </div>
                     <div class="card-content">
-                        <h3>Fries</h3>
-                        <p>Crispy, golden-fried potato fries seasoned with a touch of sea salt.</p>
+                        <h3>New York Cheese Melt</h3>
+                        <p>A classic, gooey, triple-cheese melt that promises pure comfort in every bite.</p>
+                        <div class="card-footer">
+                            <span class="price">350.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="sandwiches">
+                    <div class="card-image">
+                        <img src="Classic%20Peanut%20Butter%20%26%20Jam.webp" alt="Classic Peanut Butter &amp; Jam" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Classic Peanut Butter &amp; Jam</h3>
+                        <p>The ultimate childhood favourite, elevated with premium creamy peanut butter.</p>
+                        <div class="card-footer">
+                            <span class="price">300.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="sandwiches">
+                    <div class="card-image">
+                        <img src="The%20Bombay%20Yorker.webp" alt="The Bombay Yorker" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>The Bombay Yorker</h3>
+                        <p>A spicy, tangy fusion sandwich packed with bold street-style flavours.</p>
+                        <div class="card-footer">
+                            <span class="price">375.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PLATTERS -->
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="platters">
+                    <div class="card-image">
+                        <img src="Nachos.webp" alt="Nachos" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Nachos</h3>
+                        <p>Crispy corn tortillas loaded with melted cheese, jalape&#241;os, and fresh salsa.</p>
                         <div class="card-footer">
                             <span class="price">525.00 ₹</span>
                         </div>
                     </div>
                 </article>
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="platters">
+                    <div class="card-image">
+                        <img src="Fries.webp" alt="Fries" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Fries</h3>
+                        <p>Perfectly golden, crispy-on-the-outside potato fries served hot and fresh.</p>
+                        <div class="card-footer">
+                            <span class="price">525.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="platters">
+                    <div class="card-image">
+                        <img src="Falafel.webp" alt="Falafel" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Falafel</h3>
+                        <p>Crispy, herb-infused chickpea bites served with a side of creamy dip.</p>
+                        <div class="card-footer">
+                            <span class="price">525.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- VIENNOISERIE -->
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="viennoiserie">
+                    <div class="card-image">
+                        <img src="Butter%20Croissant.webp" alt="Butter Croissant" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Butter Croissant</h3>
+                        <p>Flaky, buttery, and freshly baked to golden perfection every single morning.</p>
+                        <div class="card-footer">
+                            <span class="price">200.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="viennoiserie">
+                    <div class="card-image">
+                        <img src="Tomato%20Pesto%20Cheese%20Mozzarella.webp" alt="Tomato Pesto Cheese Mozzarella" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Tomato Pesto Cheese Mozzarella</h3>
+                        <p>A savory pastry filled with vibrant pesto, fresh tomatoes, and gooey mozzarella.</p>
+                        <div class="card-footer">
+                            <span class="price">300.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- THIN CRUST PIZZAS -->
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="thin-crust-pizzas">
+                    <div class="card-image">
+                        <img src="The%20Og%20Margherita.webp" alt="The Og Margherita" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>The Og Margherita</h3>
+                        <p>A timeless classic with fresh basil, mozzarella, and a rich tomato base.</p>
+                        <div class="card-footer">
+                            <span class="price">375.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="thin-crust-pizzas">
+                    <div class="card-image">
+                        <img src="Veggie%20Carnival.webp" alt="Veggie Carnival" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Veggie Carnival</h3>
+                        <p>A colorful feast of fresh bell peppers, olives, and onions on a crisp crust.</p>
+                        <div class="card-footer">
+                            <span class="price">425.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="thin-crust-pizzas">
+                    <div class="card-image">
+                        <img src="Spice%20Peppers.webp" alt="Spice Peppers" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Spice Peppers</h3>
+                        <p>A fiery thin-crust pizza topped with spicy jalape&#241;os and roasted peppers.</p>
+                        <div class="card-footer">
+                            <span class="price">425.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- FRIES & SIDES -->
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="fries-sides">
+                    <div class="card-image">
+                        <img src="Salted%20Fries.webp" alt="Salted Fries" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Salted Fries</h3>
+                        <p>Classic, crispy golden fries lightly tossed with premium sea salt.</p>
+                        <div class="card-footer">
+                            <span class="price">250.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="fries-sides">
+                    <div class="card-image">
+                        <img src="Bomba%20Peri%20Peri%20Fries.webp" alt="Bomba Peri Peri Fries" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Bomba Peri Peri Fries</h3>
+                        <p>Crispy fries dusted with our signature fiery and tangy Peri Peri seasoning.</p>
+                        <div class="card-footer">
+                            <span class="price">300.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="fries-sides">
+                    <div class="card-image">
+                        <img src="Chimi-Potato%20Wedges.webp" alt="Chimi-Potato Wedges" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Chimi-Potato Wedges</h3>
+                        <p>Thick-cut potato wedges generously coated in zesty chimichurri herbs.</p>
+                        <div class="card-footer">
+                            <span class="price">300.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="fries-sides">
+                    <div class="card-image">
+                        <img src="Butter%20Garlic%20Fries.webp" alt="Butter Garlic Fries" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Butter Garlic Fries</h3>
+                        <p>Golden fries tossed in rich melted butter and aromatic minced garlic.</p>
+                        <div class="card-footer">
+                            <span class="price">300.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="fries-sides">
+                    <div class="card-image">
+                        <img src="Hummus%20Two%20Ways.webp" alt="Hummus Two Ways" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Hummus Two Ways</h3>
+                        <p>A delightful duo of classic and roasted red pepper hummus with warm pita.</p>
+                        <div class="card-footer">
+                            <span class="price">390.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="food" data-sub-category="fries-sides">
+                    <div class="card-image">
+                        <img src="Messy%20Nachos.webp" alt="Messy Nachos" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Messy Nachos</h3>
+                        <p>An ultimate indulgence of crispy nachos drenched in beans, cheese, and salsa.</p>
+                        <div class="card-footer">
+                            <span class="price">390.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ======================== -->
+                <!-- BEVERAGES - COLD COFFEE -->
+                <!-- ======================== -->
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="cold-coffee">
+                    <div class="card-image">
+                        <img src="Hazelnut.webp" alt="Hazelnut" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Hazelnut</h3>
+                        <p>Rich hazelnut syrup swirled into our signature cold coffee blend.</p>
+                        <div class="card-footer">
+                            <span class="price">350.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="cold-coffee">
+                    <div class="card-image">
+                        <img src="Caramel%20Cookie%20Crumble.webp" alt="Caramel Cookie Crumble" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Caramel Cookie Crumble</h3>
+                        <p>Buttery caramel meets crunchy cookie bits in a chilled coffee indulgence.</p>
+                        <div class="card-footer">
+                            <span class="price">330.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="cold-coffee">
+                    <div class="card-image">
+                        <img src="Crunchy%20Peanut%20Butter.webp" alt="Crunchy Peanut Butter" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Crunchy Peanut Butter</h3>
+                        <p>Creamy peanut butter blended with espresso for a nutty, bold cold coffee.</p>
+                        <div class="card-footer">
+                            <span class="price">330.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="cold-coffee">
+                    <div class="card-image">
+                        <img src="Oreo.webp" alt="Oreo Cold Coffee" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Oreo</h3>
+                        <p>Crushed Oreo cookies blended into a thick, creamy cold coffee treat.</p>
+                        <div class="card-footer">
+                            <span class="price">330.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="cold-coffee">
+                    <div class="card-image">
+                        <img src="Mocha%20Blend.webp" alt="Mocha Blend" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Mocha Blend</h3>
+                        <p>Velvety chocolate and espresso unite in this irresistible chilled blend.</p>
+                        <div class="card-footer">
+                            <span class="price">330.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="cold-coffee">
+                    <div class="card-image">
+                        <img src="Dark%20Matter.webp" alt="Dark Matter" loading="lazy" onerror="this.src='Cold%20Coffee.webp'">
+                        <button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3>Dark Matter</h3>
+                        <p>Intensely bold, double-shot dark espresso blended smooth over ice.</p>
+                        <div class="card-footer">
+                            <span class="price">330.00 ₹</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- BEVERAGES - HOT COFFEE -->
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="hot-coffee">
+                    <div class="card-image"><img src="Espresso.webp" alt="Espresso" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Espresso</h3><p>A pure, concentrated shot of our finest single-origin roast.</p><div class="card-footer"><span class="price">180.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="hot-coffee">
+                    <div class="card-image"><img src="Cortado.webp" alt="Cortado" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Cortado</h3><p>Perfectly balanced espresso cut with warm, silky steamed milk.</p><div class="card-footer"><span class="price">200.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="hot-coffee">
+                    <div class="card-image"><img src="Americano.webp" alt="Americano" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Americano</h3><p>Bold espresso mellowed with hot water for a clean, smooth finish.</p><div class="card-footer"><span class="price">200.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="hot-coffee">
+                    <div class="card-image"><img src="Caf%C3%A9%20Mocha.webp" alt="Caf&#233; Mocha" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Caf&#233; Mocha</h3><p>Rich dark chocolate melted into a double-shot latte, topped with foam.</p><div class="card-footer"><span class="price">260.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="hot-coffee">
+                    <div class="card-image"><img src="Cappuccino%20Caf%C3%A9%20Latte.webp" alt="Cappuccino / Caf&#233; Latte" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Cappuccino / Caf&#233; Latte</h3><p>Frothy steamed milk poured over a rich, aromatic shot of espresso.</p><div class="card-footer"><span class="price">230.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="hot-coffee">
+                    <div class="card-image"><img src="Spanish%20Latte.webp" alt="Spanish Latte" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Spanish Latte</h3><p>Sweetened condensed milk and espresso create a luxuriously smooth latte.</p><div class="card-footer"><span class="price">250.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="hot-coffee">
+                    <div class="card-image"><img src="Cinnamon%20Latte.webp" alt="Cinnamon Latte" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Cinnamon Latte</h3><p>Warm Ceylon cinnamon infused into a creamy, aromatic espresso latte.</p><div class="card-footer"><span class="price">250.00 ₹</span></div></div>
+                </article>
+
+                <!-- BEVERAGES - MATCHA -->
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="matcha">
+                    <div class="card-image"><img src="Matcha%20Latte.webp" alt="Matcha Latte" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Matcha Latte</h3><p>Ceremonial-grade Japanese matcha whisked into velvety steamed milk.</p><div class="card-footer"><span class="price">280.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="matcha">
+                    <div class="card-image"><img src="Iced%20Matcha%20Latte.webp" alt="Iced Matcha Latte" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Iced Matcha Latte</h3><p>Chilled matcha and cold milk layered over ice for a refreshing sip.</p><div class="card-footer"><span class="price">300.00 ₹</span></div></div>
+                </article>
+
+                <!-- BEVERAGES - ICED COFFEE -->
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="iced-coffee">
+                    <div class="card-image"><img src="Iced%20Cappuccino.webp" alt="Iced Cappuccino" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Iced Cappuccino</h3><p>Frothy espresso poured over ice with a crown of cold milk foam.</p><div class="card-footer"><span class="price">250.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="iced-coffee">
+                    <div class="card-image"><img src="Iced%20Americano.webp" alt="Iced Americano" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Iced Americano</h3><p>A crisp double shot of espresso over ice with pure chilled water.</p><div class="card-footer"><span class="price">210.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="iced-coffee">
+                    <div class="card-image"><img src="Espresso%20Cranberry.webp" alt="Espresso Cranberry" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Espresso Cranberry</h3><p>Tart cranberry juice meets bold espresso in this surprising summer twist.</p><div class="card-footer"><span class="price">230.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="iced-coffee">
+                    <div class="card-image"><img src="Fresh%20Orange%20Coffee.webp" alt="Fresh Orange Coffee" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Fresh Orange Coffee</h3><p>Freshly squeezed orange juice paired with a shot of chilled espresso.</p><div class="card-footer"><span class="price">300.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="iced-coffee">
+                    <div class="card-image"><img src="Espresso%20Redbull.webp" alt="Espresso Redbull" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Espresso Redbull</h3><p>Double espresso charged with Red Bull for the ultimate energy kick.</p><div class="card-footer"><span class="price">350.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="iced-coffee">
+                    <div class="card-image"><img src="Espresso%20Tonic.webp" alt="Espresso Tonic" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Espresso Tonic</h3><p>Sparkling tonic water crowned with a float of rich, bold espresso.</p><div class="card-footer"><span class="price">270.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="iced-coffee">
+                    <div class="card-image"><img src="Espresso%20Tornado.webp" alt="Espresso Tornado" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Espresso Tornado</h3><p>A whirlwind of layered espresso and milk that swirls into pure bliss.</p><div class="card-footer"><span class="price">350.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="iced-coffee">
+                    <div class="card-image"><img src="Espresso%20Ginger%20Ale.webp" alt="Espresso Ginger Ale" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Espresso Ginger Ale</h3><p>Spicy ginger ale fizz topped with a smooth shot of chilled espresso.</p><div class="card-footer"><span class="price">270.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="iced-coffee">
+                    <div class="card-image"><img src="Iced%20Latte.webp" alt="Iced Latte" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Iced Latte</h3><p>Smooth espresso poured over cold milk and ice for effortless refreshment.</p><div class="card-footer"><span class="price">250.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="iced-coffee">
+                    <div class="card-image"><img src="Thai%20Iced%20Latte.webp" alt="Thai Iced Latte" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Thai Iced Latte</h3><p>Sweet Thai-spiced espresso layered with condensed milk over crushed ice.</p><div class="card-footer"><span class="price">260.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="iced-coffee">
+                    <div class="card-image"><img src="Vietnamese%20Coconut%20Iced%20Latte.webp" alt="Vietnamese Coconut Iced Latte" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Vietnamese Coconut Iced Latte</h3><p>Creamy coconut milk and Vietnamese coffee poured over ice, rich and tropical.</p><div class="card-footer"><span class="price">260.00 ₹</span></div></div>
+                </article>
+
+                <!-- BEVERAGES - HOT CHOCOLATE -->
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="hot-chocolate">
+                    <div class="card-image"><img src="55%25%20Dark%20Hot%20Chocolate.webp" alt="55% Dark Hot Chocolate" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>55% Dark Hot Chocolate</h3><p>Deep, bittersweet 55% dark cocoa melted into steaming whole milk.</p><div class="card-footer"><span class="price">300.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="hot-chocolate">
+                    <div class="card-image"><img src="Ferrero%20Rocher%20Hot%20Chocolate.webp" alt="Ferrero Rocher Hot Chocolate" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Ferrero Rocher Hot Chocolate</h3><p>Hazelnut-infused chocolate heaven inspired by the iconic golden treat.</p><div class="card-footer"><span class="price">360.00 ₹</span></div></div>
+                </article>
+
+                <!-- BEVERAGES - NON COFFEE -->
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="non-coffee">
+                    <div class="card-image"><img src="Fresh%20Orange%20Mojito.webp" alt="Fresh Orange Mojito" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Fresh Orange Mojito</h3><p>Hand-squeezed orange juice muddled with fresh mint and sparkling soda.</p><div class="card-footer"><span class="price">300.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="non-coffee">
+                    <div class="card-image"><img src="Mint%20Mojito.webp" alt="Mint Mojito" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Mint Mojito</h3><p>Crushed garden mint, zesty lime, and soda for a cool, crisp refresher.</p><div class="card-footer"><span class="price">240.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="non-coffee">
+                    <div class="card-image"><img src="Lemon%20Iced%20Tea.webp" alt="Lemon Iced Tea" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Lemon Iced Tea</h3><p>Chilled house-brewed tea brightened with fresh lemon and a hint of honey.</p><div class="card-footer"><span class="price">275.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="non-coffee">
+                    <div class="card-image"><img src="Peach%20Iced%20Tea.webp" alt="Peach Iced Tea" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Peach Iced Tea</h3><p>Sweet, sun-ripened peach flavour infused into a refreshing chilled tea.</p><div class="card-footer"><span class="price">275.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="non-coffee">
+                    <div class="card-image"><img src="Fresh%20Orange%20Juice.webp" alt="Fresh Orange Juice" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Fresh Orange Juice</h3><p>Pure, hand-squeezed seasonal oranges served chilled with no added sugar.</p><div class="card-footer"><span class="price">300.00 ₹</span></div></div>
+                </article>
+
+                <!-- BEVERAGES - COLD BREW -->
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="cold-brew">
+                    <div class="card-image"><img src="Cold%20Brew%20Black.webp" alt="Cold Brew Black" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Cold Brew Black</h3><p>Slow-steeped for 18 hours, this black cold brew is bold yet silky smooth.</p><div class="card-footer"><span class="price">220.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="cold-brew">
+                    <div class="card-image"><img src="Vietnamese%20Cold%20Brew.webp" alt="Vietnamese Cold Brew" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Vietnamese Cold Brew</h3><p>Condensed milk swirled into slow-steeped cold brew, sweet and robust.</p><div class="card-footer"><span class="price">250.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="cold-brew">
+                    <div class="card-image"><img src="Rum%20Barrel.webp" alt="Rum Barrel" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Rum Barrel</h3><p>Cold brew aged with rum barrel notes for a deep, woody, aromatic finish.</p><div class="card-footer"><span class="price">300.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="cold-brew">
+                    <div class="card-image"><img src="Mont%20Blanc.webp" alt="Mont Blanc" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Mont Blanc</h3><p>A luxurious white chocolate cold brew that's creamy, sweet, and decadent.</p><div class="card-footer"><span class="price">300.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="cold-brew">
+                    <div class="card-image"><img src="Fresh%20Orange%20Cold%20Brew.webp" alt="Fresh Orange Cold Brew" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Fresh Orange Cold Brew</h3><p>Citrusy orange freshness fused with our slow-steeped cold brew coffee.</p><div class="card-footer"><span class="price">300.00 ₹</span></div></div>
+                </article>
+
+                <!-- BEVERAGES - THICK SHAKE -->
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="thick-shake">
+                    <div class="card-image"><img src="Chocolate.webp" alt="Chocolate Thick Shake" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Chocolate</h3><p>Thick, frosty, and loaded with premium Belgian chocolate goodness.</p><div class="card-footer"><span class="price">280.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="thick-shake">
+                    <div class="card-image"><img src="Oreo%20Thick%20Shake.webp" alt="Oreo Thick Shake" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Oreo</h3><p>Crushed Oreo cookies blended into a thick, creamy vanilla milkshake.</p><div class="card-footer"><span class="price">280.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="thick-shake">
+                    <div class="card-image"><img src="Lotus%20Biscoff.webp" alt="Lotus Biscoff Thick Shake" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Lotus Biscoff</h3><p>Caramelised Biscoff cookies blended into a spiced, velvety thick shake.</p><div class="card-footer"><span class="price">310.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="thick-shake">
+                    <div class="card-image"><img src="Kit%20Kat.webp" alt="Kit Kat Thick Shake" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Kit Kat</h3><p>Crunchy Kit Kat wafer chunks swirled into a rich chocolate milkshake.</p><div class="card-footer"><span class="price">320.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="thick-shake">
+                    <div class="card-image"><img src="Nutella%20Brownie.webp" alt="Nutella Brownie Thick Shake" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Nutella Brownie</h3><p>Fudgy brownie pieces and Nutella blended into one heavenly thick shake.</p><div class="card-footer"><span class="price">320.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="beverages" data-sub-category="thick-shake">
+                    <div class="card-image"><img src="Blueberry%20Granola.webp" alt="Blueberry Granola Thick Shake" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Blueberry Granola</h3><p>Wild blueberries and crunchy granola spun into a wholesome, fruity shake.</p><div class="card-footer"><span class="price">370.00 ₹</span></div></div>
+                </article>
+
+                <!-- ======================== -->
+                <!-- DESSERTS -->
+                <!-- ======================== -->
+                <article class="menu-card reveal-up" data-main-category="desserts">
+                    <div class="card-image"><img src="New%20York%20Cheesecake.webp" alt="New York Cheesecake" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>New York Cheesecake</h3><p>Classic, rich, and creamy baked cheesecake with a buttery biscuit crust.</p><div class="card-footer"><span class="price">325.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="desserts">
+                    <div class="card-image"><img src="Nutella%20Hazelnut%20Cheesecake.webp" alt="Nutella Hazelnut Cheesecake" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Nutella Hazelnut Cheesecake</h3><p>A decadent swirl of premium Nutella and roasted hazelnuts in every bite.</p><div class="card-footer"><span class="price">375.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="desserts">
+                    <div class="card-image"><img src="Lotus%20Biscoff%20Cheesecake.webp" alt="Lotus Biscoff Cheesecake" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Lotus Biscoff Cheesecake</h3><p>Caramelised Biscoff spread and biscuit crumbs blended into a smooth cheesecake.</p><div class="card-footer"><span class="price">375.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="desserts">
+                    <div class="card-image"><img src="Blueberry%20Cheesecake.webp" alt="Blueberry Cheesecake" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Blueberry Cheesecake</h3><p>Sweet and tangy wild blueberry compote topping a velvety vanilla cheesecake.</p><div class="card-footer"><span class="price">375.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="desserts">
+                    <div class="card-image"><img src="Vanilla%20Affogato.webp" alt="Vanilla Affogato" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Vanilla Affogato</h3><p>A scoop of premium vanilla bean ice cream elegantly drowned in hot espresso.</p><div class="card-footer"><span class="price">220.00 ₹</span></div></div>
+                </article>
+                <article class="menu-card reveal-up" data-main-category="desserts">
+                    <div class="card-image"><img src="Chocolate%20Affogato.webp" alt="Chocolate Affogato" loading="lazy" onerror="this.src='Cold%20Coffee.webp'"><button class="fav-btn" aria-label="Add to favorites"><i class="far fa-heart"></i></button></div>
+                    <div class="card-content"><h3>Chocolate Affogato</h3><p>Rich chocolate ice cream melting beautifully under a double shot of espresso.</p><div class="card-footer"><span class="price">240.00 ₹</span></div></div>
+                </article>
+
             </div>
 
             <!-- View Full Menu Button & Note -->
@@ -312,7 +972,7 @@
             
             <div class="masonry-grid">
 
-                <!-- Item 1: Landscape — cappuccino closeup -->
+                <!-- Item 1: Landscape cappuccino closeup -->
                 <div class="masonry-item reveal-up">
                     <img
                         src="Winter%20calls%20for%20the%20classics!!A%20cappuccino%2C%20warm%20foam%2C%20familiar%20comfort%2C%20the%20kind%20you%20order%20wit.webp"
@@ -322,16 +982,17 @@
                     <div class="overlay"><i class="fas fa-expand-alt"></i></div>
                 </div>
 
-<!-- Item 2: TALL portrait slot — brand video -->
-<div class="masonry-item masonry-video reveal-up">
-    <video
-        autoplay muted loop playsinline
-        aria-label="Four Coffee - The Clay Chapter Video">
+                <!-- Item 2: TALL portrait slot brand video -->
+                <div class="masonry-item masonry-video reveal-up">
+                    <video
+                        autoplay muted loop playsinline
+                        aria-label="Four Coffee - The Clay Chapter Video">
         <source src="Four%20Coffee-%20The%20Clay%20ChapterWhere%20the%20city%20rush%20slows.%20And%20the%20soul%20stirs.In%20the%20heart%20of%20CG%20Road.mp4" type="video/mp4">
-    </video>
-    <div class="overlay"><i class="fas fa-play-circle"></i></div>
-</div>
-                <!-- Item 3: Landscape — outdoor golden hour coffee -->
+                    </video>
+                    <div class="overlay"><i class="fas fa-play-circle"></i></div>
+                </div>
+
+                <!-- Item 3: Landscape outdoor golden hour coffee -->
                 <div class="masonry-item reveal-up">
                     <img
                         src="Golden%20skies%2C%20cool%20breeze%2C%20and%20that%20perfect%20sip%20of%20coffee%20in%20hand%E2%80%94because%20sunsets%20just%20taste%20be%20(1).webp"
@@ -341,7 +1002,7 @@
                     <div class="overlay"><i class="fas fa-expand-alt"></i></div>
                 </div>
 
-                <!-- Item 4: Landscape — handcrafted hot coffee blends -->
+                <!-- Item 4: Landscape handcrafted hot coffee blends -->
                 <div class="masonry-item reveal-up">
                     <img
                         src="Not%20just%20hot%20coffee%20%E2%80%94%20its%20handcrafted%20origin%20blends%20made%20to%20warm%20you%20up%20and%20wake%20you%20up.%20Get%20y%20(1).webp"
@@ -351,7 +1012,7 @@
                     <div class="overlay"><i class="fas fa-expand-alt"></i></div>
                 </div>
 
-                <!-- Item 5: TALL portrait slot — person with coffee -->
+                <!-- Item 5: TALL portrait slot person with coffee -->
                 <div class="masonry-item reveal-up">
                     <img
                         src="For%20the%20ones%20who%20don%E2%80%99t%20just%20show%20up%2C%20they%20own%20the%20room.Hot%20shots%20deserve%20a%20cup%20that%20matches%20the%20(1).webp"
@@ -361,7 +1022,7 @@
                     <div class="overlay"><i class="fas fa-expand-alt"></i></div>
                 </div>
 
-                <!-- Item 6: Landscape — dessert and coffee pairing -->
+                <!-- Item 6: Landscape dessert and coffee pairing -->
                 <div class="masonry-item reveal-up">
                     <img
                         src="Warm%20Hug%20Served%20Daily.%20%F0%9F%92%9BPair%20your%20pick-me-up%20with%20a%20cheesecake%20cuddle%20at%20FourCoffee.%20You%20deser%20(1).webp"
@@ -371,12 +1032,18 @@
                     <div class="overlay"><i class="fas fa-expand-alt"></i></div>
                 </div>
 
+                <!-- Item 7: Instagram QR Code -->
+<div class="masonry-item reveal-up" style="background: #ffffff; padding: 2.5rem; display: flex; align-items: center; justify-content: center; cursor: default;">
+    <img src="FourCoffee_Instagram_QR_With_Logo.webp" alt="Scan to follow Four Coffee on Instagram" loading="lazy" style="width: 100%; height: 100%; object-fit: contain;">
+</div>
+
             </div>
             <div class="text-center mt-4">
                 <a href="https://www.instagram.com/fourcoffee.india/" class="btn btn-outline">Follow us on Instagram</a>
             </div>
         </div>
     </section>
+
 
     <!-- Reviews Section -->
     <section id="reviews" class="reviews section-padding">
@@ -393,7 +1060,7 @@
                         <p class="review-text">"Best coffee I've had, and a really chill place to hangout. The food is great, a bit pricey but really good. Staff is very polite. Went many times with friends, would visit again!"</p>
                         <div class="reviewer">
                             <div class="reviewer-info">
-                                <h3>Krittika K C</h3>
+                                <h4>Krittika K C</h4>
                             </div>
                         </div>
                     </div>
@@ -406,7 +1073,7 @@
 Coffee is the best so far on this trip."</p>
                         <div class="reviewer">
                             <div class="reviewer-info">
-                                <h3>Raj Vadgama</h3>
+                                <h4>Raj Vadgama</h4>
                             </div>
                         </div>
                     </div>
@@ -415,11 +1082,10 @@ Coffee is the best so far on this trip."</p>
                         <div class="stars">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
-                        <p class="review-text">"Amazing food, so tasty.. environment and service is wonderful. Great place for a perfect hangout ❤️
-"</p>
+                        <p class="review-text">"Amazing food, so tasty.. environment and service is wonderful. Great place for a perfect hangout"</p>
                         <div class="reviewer">
                             <div class="reviewer-info">
-                                <h3>Krishna Patel</h3>
+                                <h4>Krishna Patel</h4>
                             </div>
                         </div>
                     </div>
@@ -442,7 +1108,7 @@ Coffee is the best so far on this trip."</p>
                     <div class="location-card active" data-map="https://maps.google.com/maps?q=At+Frizbee,+Nr.+TAJ+Hotel+Lane,+Off+Sindhu+Bhavan+Road,+Thaltej,+Ahmedabad+Gujarat+380059&t=&z=15&ie=UTF8&iwloc=&output=embed">
                         <h3>Thaltej</h3>
                         <p><i class="fas fa-map-marker-alt"></i> <span>At Frizbee, Nr. TAJ Hotel Lane, Near Sardar Patel Ring Road, Off Sindhu Bhavan Road, PRL Colony, Thaltej, Ahmedabad, Gujarat 380059</span></p>
-                        <p><i class="far fa-clock"></i> <span>Mon–Sun: 11:00 AM – 2:00 AM</span></p>
+                        <p><i class="far fa-clock"></i> <span>Mon-Sun: 11:00 AM - 2:00 AM</span></p>
                         <p><i class="fas fa-phone"></i> <span><a href="tel:+919054483044">+91 90544 83044</a></span></p>
                         <a href="https://share.google/xy1hJdBJmBmhTGQeU" target="_blank" rel="noopener noreferrer" class="btn-link">Get Directions <i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -450,7 +1116,7 @@ Coffee is the best so far on this trip."</p>
                     <div class="location-card" data-map="https://maps.google.com/maps?q=Chintan+Bunglow,+Behind+GLS+Commerce+College+Ground,+Ellisbridge,+Ahmedabad+Gujarat+380006&t=&z=15&ie=UTF8&iwloc=&output=embed">
                         <h3>Ellisbridge</h3>
                         <p><i class="fas fa-map-marker-alt"></i> <span>Chintan Bunglow, Behind GLS Commerce College Ground, Ellisbridge, Ahmedabad, Gujarat 380006</span></p>
-                        <p><i class="far fa-clock"></i> <span>Mon–Sun: 10:00 AM – 11:00 PM</span></p>
+                        <p><i class="far fa-clock"></i> <span>Mon-Sun: 10:00 AM - 11:00 PM</span></p>
                         <p><i class="fas fa-phone"></i> <span><a href="tel:+918780624300">+91 87806 24300</a></span></p>
                         <a href="https://share.google/D2cCLOqKhhRvd308D" target="_blank" rel="noopener noreferrer" class="btn-link">Get Directions <i class="fas fa-arrow-right"></i></a>
                     </div>
@@ -479,7 +1145,7 @@ Coffee is the best so far on this trip."</p>
             </div>
             
             <div class="footer-links">
-                <h3>Quick Links</h3>
+                <h4>Quick Links</h4>
                 <ul>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#menu">Our Menu</a></li>
