@@ -85,21 +85,43 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => revealOnScroll.observe(el));
 
     // --- Menu Filtering & Search ---
-    const filterBtns = document.querySelectorAll('.filter-btn');
+    const mainFilterBtns = document.querySelectorAll('#menuFilters .filter-btn');
+    const subFilterBtns = document.querySelectorAll('.sub-filter-btn');
     const menuItems = document.querySelectorAll('.menu-card');
     const searchInput = document.getElementById('menuSearch');
     const noResults = document.getElementById('no-results');
+    const foodFilters = document.getElementById('foodFilters');
+    const beveragesFilters = document.getElementById('beveragesFilters');
 
-    function filterMenu(category, searchTerm) {
+    let currentMain = 'food';
+    let currentSub = 'sharing-plates';
+
+    function filterMenu() {
         let hasVisibleItems = false;
-        const term = searchTerm.toLowerCase().trim();
+        const term = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+        if (foodFilters) {
+            foodFilters.style.display = (currentMain === 'food') ? 'flex' : 'none';
+        }
+        if (beveragesFilters) {
+            beveragesFilters.style.display = (currentMain === 'beverages') ? 'flex' : 'none';
+        }
 
         menuItems.forEach(item => {
-            const itemCategory = item.getAttribute('data-category');
-            const itemName = item.querySelector('h3').innerText.toLowerCase();
-            const itemDesc = item.querySelector('p').innerText.toLowerCase();
+            const itemMain = item.getAttribute('data-main-category');
+            const itemSub = item.getAttribute('data-sub-category');
+            const h3Tag = item.querySelector('h3');
+            const itemName = h3Tag ? h3Tag.innerText.toLowerCase() : '';
+            const pTag = item.querySelector('p');
+            const itemDesc = pTag ? pTag.innerText.toLowerCase() : '';
             
-            const categoryMatch = category === 'all' || itemCategory === category;
+            let categoryMatch = false;
+            if (currentMain === 'food' || currentMain === 'beverages') {
+                categoryMatch = (itemMain === currentMain && itemSub === currentSub);
+            } else {
+                categoryMatch = (itemMain === currentMain);
+            }
+
             const searchMatch = term === '' || itemName.includes(term) || itemDesc.includes(term);
 
             if (categoryMatch && searchMatch) {
@@ -114,29 +136,59 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        if (!hasVisibleItems) {
-            noResults.classList.remove('hidden');
-        } else {
-            noResults.classList.add('hidden');
+        if (noResults) {
+            if (!hasVisibleItems) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
         }
     }
 
-    let currentCategory = 'all';
-
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Update active class on buttons
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            
-            currentCategory = btn.getAttribute('data-filter');
-            filterMenu(currentCategory, searchInput.value);
+    if (mainFilterBtns.length > 0) {
+        mainFilterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                mainFilterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                currentMain = btn.getAttribute('data-filter');
+                if (currentMain === 'food') {
+                    const activeSub = document.querySelector('#foodFilters .sub-filter-btn.active');
+                    currentSub = activeSub ? activeSub.getAttribute('data-filter') : 'sharing-plates';
+                } else if (currentMain === 'beverages') {
+                    const activeSub = document.querySelector('#beveragesFilters .sub-filter-btn.active');
+                    currentSub = activeSub ? activeSub.getAttribute('data-filter') : 'cold-coffee';
+                }
+                filterMenu();
+            });
         });
-    });
+    }
 
-    searchInput.addEventListener('input', (e) => {
-        filterMenu(currentCategory, e.target.value);
-    });
+    if (subFilterBtns.length > 0) {
+        subFilterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const parent = btn.closest('.secondary-filters');
+                if (parent) {
+                    parent.querySelectorAll('.sub-filter-btn').forEach(b => b.classList.remove('active'));
+                } else {
+                    subFilterBtns.forEach(b => b.classList.remove('active'));
+                }
+                btn.classList.add('active');
+                
+                currentSub = btn.getAttribute('data-filter');
+                filterMenu();
+            });
+        });
+    }
+
+    if (searchInput) {
+        searchInput.addEventListener('input', () => {
+            filterMenu();
+        });
+    }
+
+    // Initialize state
+    filterMenu();
 
     // --- Favorite Buttons ---
     const favBtns = document.querySelectorAll('.fav-btn');
@@ -164,35 +216,43 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalCards = cards.length;
 
     function updateSlider() {
-        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        if (track) {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
     }
 
-    nextBtn.addEventListener('click', () => {
-        if (currentIndex < totalCards - 1) {
-            currentIndex++;
-        } else {
-            currentIndex = 0; // Loop back
-        }
-        updateSlider();
-    });
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < totalCards - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0; // Loop back
+            }
+            updateSlider();
+        });
+    }
 
-    prevBtn.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            currentIndex = totalCards - 1; // Loop end
-        }
-        updateSlider();
-    });
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = totalCards - 1; // Loop end
+            }
+            updateSlider();
+        });
+    }
 
     // Auto slide
     setInterval(() => {
-        if (currentIndex < totalCards - 1) {
-            currentIndex++;
-        } else {
-            currentIndex = 0;
+        if (totalCards > 0) {
+            if (currentIndex < totalCards - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            updateSlider();
         }
-        updateSlider();
     }, 5000);
 
     // --- Locations Tabs & Map Switcher ---
