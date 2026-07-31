@@ -29,8 +29,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Preload Hero Image for Faster LCP (Responsive) -->
-<link rel="preload" as="image" href="Barista brewing espresso at Four Coffee - Mobile.webp" media="(max-width: 768px)" fetchpriority="high">
-<link rel="preload" as="image" href="Barista brewing espresso at Four Coffee.webp" media="(min-width: 769px)" fetchpriority="high">
+<link rel="preload" as="image" href="Barista%20brewing%20espresso%20at%20Four%20Coffee%20-%20Mobile.webp" media="(max-width: 768px)" fetchpriority="high">
+<link rel="preload" as="image" href="Barista%20brewing%20espresso%20at%20Four%20Coffee.webp" media="(min-width: 769px)" fetchpriority="high">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -67,8 +67,11 @@
 <header id="home" class="hero">
     <div class="hero-video-wrapper">
         <picture>
+            <!-- Mobile Image (Screen width up to 768px) -->
+            <source media="(max-width: 768px)" srcset="Barista%20brewing%20espresso%20at%20Four%20Coffee%20-%20Mobile.webp">
+
             <!-- Desktop Image (Default / Fallback) -->
-            <img src="Barista brewing espresso at Four Coffee.webp" alt="Barista brewing espresso at Four Coffee" class="hero-bg" fetchpriority="high">
+            <img src="Barista%20brewing%20espresso%20at%20Four%20Coffee.webp" alt="Barista brewing espresso at Four Coffee" class="hero-bg" fetchpriority="high">
         </picture>
         <div class="overlay"></div>
     </div>
@@ -121,7 +124,8 @@
                     <img 
                         src="Four%20Coffee%20The%20Clay%20Chapter%20Cafe.webp" 
                         alt="Four Coffee The Clay Chapter Cafe" 
-                        loading="lazy" 
+                        loading="eager" 
+                        decoding="async"
                         class="frame-img"
                     />
                 </div>
