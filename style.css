@@ -1214,7 +1214,7 @@ img {
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* changed from center to flex-start */
     gap: 1.2rem;
     max-height: 550px;
     overflow-y: auto;
